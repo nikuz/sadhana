@@ -14,6 +14,8 @@
 		BFBA31192A84673D008B9A47 /* AppBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA31182A84673D008B9A47 /* AppBackground.swift */; };
 		BFBA311B2A846EEE008B9A47 /* LongButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA311A2A846EEE008B9A47 /* LongButton.swift */; };
 		BFBA311D2A85F782008B9A47 /* BottomDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA311C2A85F782008B9A47 /* BottomDrawer.swift */; };
+		BFBA31212A86F6B7008B9A47 /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA31202A86F6B7008B9A47 /* Practice.swift */; };
+		BFBA31242A86FB84008B9A47 /* PracticeCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA31232A86FB84008B9A47 /* PracticeCreator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		BFBA31182A84673D008B9A47 /* AppBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBackground.swift; sourceTree = "<group>"; };
 		BFBA311A2A846EEE008B9A47 /* LongButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButton.swift; sourceTree = "<group>"; };
 		BFBA311C2A85F782008B9A47 /* BottomDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDrawer.swift; sourceTree = "<group>"; };
+		BFBA31202A86F6B7008B9A47 /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
+		BFBA31232A86FB84008B9A47 /* PracticeCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeCreator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +61,10 @@
 		BFADA1BF2A82EE5B00C009AF /* sadhana */ = {
 			isa = PBXGroup;
 			children = (
-				BFBA31172A8466BF008B9A47 /* views */,
+				BFBA31222A86F6C3008B9A47 /* Controllers */,
+				BFBA311F2A86F642008B9A47 /* Tools */,
+				BFBA311E2A86F62D008B9A47 /* Models */,
+				BFBA31172A8466BF008B9A47 /* Views */,
 				BFADA1C02A82EE5B00C009AF /* sadhanaApp.swift */,
 				BFADA1C22A82EE5B00C009AF /* ContentView.swift */,
 				BFADA1C42A82EE5D00C009AF /* Assets.xcassets */,
@@ -74,14 +81,37 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		BFBA31172A8466BF008B9A47 /* views */ = {
+		BFBA31172A8466BF008B9A47 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				BFBA31182A84673D008B9A47 /* AppBackground.swift */,
 				BFBA311A2A846EEE008B9A47 /* LongButton.swift */,
 				BFBA311C2A85F782008B9A47 /* BottomDrawer.swift */,
+				BFBA31232A86FB84008B9A47 /* PracticeCreator.swift */,
 			);
-			path = views;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BFBA311E2A86F62D008B9A47 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BFBA31202A86F6B7008B9A47 /* Practice.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BFBA311F2A86F642008B9A47 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		BFBA31222A86F6C3008B9A47 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +184,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFBA31212A86F6B7008B9A47 /* Practice.swift in Sources */,
+				BFBA31242A86FB84008B9A47 /* PracticeCreator.swift in Sources */,
 				BFADA1C32A82EE5B00C009AF /* ContentView.swift in Sources */,
 				BFBA31192A84673D008B9A47 /* AppBackground.swift in Sources */,
 				BFBA311B2A846EEE008B9A47 /* LongButton.swift in Sources */,
@@ -306,6 +338,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -339,6 +372,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -38,7 +38,6 @@ struct LongButton: View {
                     .font(.system(size: 20))
                     .foregroundColor(color ?? .white)
             }
-//            .padding(padding)
             .frame(maxWidth: .infinity, minHeight: 66, alignment: alignment)
         }
         .buttonStyle(LongButtonStyle(borderStyle: borderStyle))

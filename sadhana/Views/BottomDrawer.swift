@@ -22,9 +22,9 @@ struct BottomDrawer<Content: View>: View {
             VStack {
                 content
             }
+            .frame(maxWidth: .infinity)
             .presentationDragIndicator(.hidden)
             .presentationBackground(Color(red: 0.16, green: 0.16, blue: 0.17))
-//            .padding()
             .overlay {
                 GeometryReader { geometry in
                     Color.clear.preference(key: InnerHeightPreferenceKey.self, value: geometry.size.height)

@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var showingCredits = false
+    @State private var practiceSelectorIsVisible = false
+    @State private var practiceCreatorIsVisible = false
+    @State private var practice: Practice?
     
     var body: some View {
         ZStack {
@@ -20,20 +22,21 @@ struct ContentView: View {
                     iconColor: .orange,
                     borderStyle: LongButtonBorderStyle.dashed,
                     action: {
-                        showingCredits.toggle()
+                        practiceSelectorIsVisible = true
                     }
                 )
                 .padding(.horizontal)
             }
             
-            BottomDrawer(isPresented: $showingCredits) {
+            BottomDrawer(isPresented: $practiceSelectorIsVisible) {
                 LongButton(
                     label: "Meditation",
                     asset: "meditation",
                     alignment: .leading,
                     action: {
-                        print("add meditation")
-                        
+                        practice = Practice(type: PracticeType.meditation)
+                        practiceSelectorIsVisible = false
+                        practiceCreatorIsVisible = true
                     }
                 )
                 .padding(.horizontal, 12)
@@ -44,12 +47,25 @@ struct ContentView: View {
                     asset: "kirtan",
                     alignment: .leading,
                     action: {
-                        print("add kirtan")
+                        practice = Practice(type: PracticeType.kirtan)
+                        practiceSelectorIsVisible = false
+                        practiceCreatorIsVisible = true
                     }
                 )
                 .padding(.horizontal, 12)
             }
+            
+            BottomDrawer(isPresented: $practiceCreatorIsVisible) {
+                if (practice != nil) {
+                    PracticeCreator(practice: practice!, onSaved: { duration, practice in
+                        print(duration)
+                        print(practice)
+                        practiceCreatorIsVisible = false
+                    })
+                }
+            }
         }
+        .preferredColorScheme(.dark)
     }
 }
 
